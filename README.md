@@ -126,11 +126,11 @@ WHERE invoice_id = 115;
 
 This query deleted records from the `invoice_line_items` and `invoices` tables.
 
-### invoices Table
+### `invoices` Table
 
 ![Results](ch5_ex9_result_invoices.png)
 
-### invoice_line_items Table
+### `invoice_line_items` Table
 
 ![Results](ch5_ex9_result_invoice_line_items.png)
 

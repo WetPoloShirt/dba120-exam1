@@ -7,6 +7,8 @@ INSERT INTO terms (terms_id, terms_description, terms_due_days)
 VALUES ('6', 'Net due 120 days', '120');
 ```
 
+This query created a new record in the `terms` table
+
 ![Results](ch5_ex1_results.png)
 
 ---
@@ -20,6 +22,8 @@ SET terms_description = 'Net due 125 days',
 WHERE terms_id = 6;
 ```
 
+This query updated the `terms_description` and `terms_due_days`.
+
 ![Results](ch5_ex2_result.png)
 
 ---
@@ -31,6 +35,8 @@ DELETE FROM terms
 WHERE terms_id = 6
 ```
 
+This query deleted the record with the `terms_id` of 6.
+
 ![Results](ch5_ex3_result.png)
 
 ---
@@ -41,6 +47,8 @@ WHERE terms_id = 6
 INSERT INTO invoices
 VALUES (NULL, 32, 'AX-014-027', '2018-08-01', 434.58, 0.00, 0.00,2, '2018-08-31', null)
 ```
+
+This query created a new record in the `invoices` table.
 
 ![Results](ch5_ex4_result.png)
 
@@ -55,6 +63,8 @@ VALUES
 ((SELECT MAX(invoice_id) FROM invoices), 2, 527, 254.35, 'Exchange Server update');
 ```
 
+This query added new records into the `invoice_line_items` table while `SELECT`ing the `invoice_id` from the `invoices` table.
+
 ![Results](ch5_ex5_result.png)
 
 ---
@@ -68,6 +78,8 @@ SET credit_total = invoice_total * 0.1,
 WHERE invoice_id = 115;
 ```
 
+This query `UPDATE`d the `invoices` table by performing math calculations.
+
 ![Results](ch5_ex6_result.png)
 
 ---
@@ -79,6 +91,8 @@ UPDATE vendors
 SET default_account_number = 403
 WHERE vendor_id = 44
 ```
+
+This query `UPDATE`d the `vendors` table.
 
 ![Results](ch5_ex7_result.png)
 
@@ -95,6 +109,8 @@ WHERE vendor_id in (
   WHERE default_terms_id = 2);
 ```
 
+This query updated the `invoices` table based on data that was listed in the `vendors` table.
+
 ![Results](ch5_ex8_result.png)
 
 ---
@@ -107,6 +123,8 @@ WHERE invoice_id = 115;
 DELETE FROM invoices
 WHERE invoice_id = 115;
 ```
+
+This query deleted records from the `invoice_line_items` and `invoices` tables.
 
 ### invoices Table
 

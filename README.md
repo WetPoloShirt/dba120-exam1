@@ -108,7 +108,12 @@ DELETE FROM invoices
 WHERE invoice_id = 115;
 ```
 
+### invoices Table
+
 ![Results](ch5_ex9_result_invoices.png)
+
+### invoice_line_items Table
+
 ![Results](ch5_ex9_result_invoice_line_items.png)
 
 ---
